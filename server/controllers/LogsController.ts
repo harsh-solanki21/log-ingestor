@@ -1,5 +1,5 @@
 import type { Request, Response } from 'express'
-import pool from '../config/pg'
+import pool from '../config/postgres'
 import type { Log } from '../interfaces/Logs'
 // import { throwValidationErrors } from '../utils/RequestValidations'
 import { BadRequest } from '../errors'
