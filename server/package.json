@@ -12,6 +12,7 @@
   "author": "Harsh Solanki",
   "license": "ISC",
   "dependencies": {
+    "@elastic/elasticsearch": "^8.10.0",
     "cors": "^2.8.5",
     "express": "^4.18.2",
     "express-validator": "^7.0.1",

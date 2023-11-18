@@ -4,11 +4,11 @@ import dotenv from 'dotenv'
 dotenv.config()
 
 const pool = new Pool({
-  user: 'postgres',
-  password: 'harsh21',
-  host: 'localhost',
-  port: 5432,
-  database: 'log-ingestor'
+  user: process.env.PG_USER,
+  password: process.env.PG_PASSWORD,
+  host: process.env.PG_HOST,
+  port: Number(process.env.PG_PORT),
+  database: process.env.PG_DB
 })
 
 export default pool
