@@ -11,7 +11,7 @@ export class RequestValidationErrors extends BaseError {
 
   serializeErrors (): Array<{ message: string, field?: string | undefined }> {
     return this.errors.map((err: any) => {
-      return { message: err.msg, field: err.param }
+      return { message: err.msg, field: err.path }
     })
   }
 }

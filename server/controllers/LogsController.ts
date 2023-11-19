@@ -1,11 +1,11 @@
 import type { Request, Response } from 'express'
 import pool from '../config/postgres'
 import type { Log } from '../interfaces/Logs'
-// import { throwValidationErrors } from '../utils/RequestValidations'
+import { throwValidationErrors } from '../utils/RequestValidations'
 import { BadRequest } from '../errors'
 
 export const insertLogs = async (req: Request, res: Response): Promise<void> => {
-  // throwValidationErrors(req)
+  throwValidationErrors(req)
   const logs = req.body as Log[]
 
   try {
